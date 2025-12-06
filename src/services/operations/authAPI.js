@@ -16,7 +16,7 @@ const {
 } = endpoints
 
 // ================ Social Login (Google/Facebook) ================
-export function socialLogin(email, firstName, lastName, image, navigate) {
+export function socialLogin(email, firstName, lastName, image, navigate, accountType) {
   return async (dispatch) => {
     const toastId = toast.loading("Loading...");
     dispatch(setLoading(true));
@@ -26,7 +26,8 @@ export function socialLogin(email, firstName, lastName, image, navigate) {
         email,
         firstName,
         lastName,
-        image
+        image,
+        accountType,
       })
 
       console.log("SOCIAL LOGIN API RESPONSE............", response);

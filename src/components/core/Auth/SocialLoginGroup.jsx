@@ -6,7 +6,7 @@ import { auth, googleProvider, facebookProvider } from '../../../firebase'
 import { signInWithPopup } from 'firebase/auth'
 import { socialLogin } from '../../../services/operations/authAPI'
 
-const SocialLoginGroup = () => {
+const SocialLoginGroup = ({ accountType }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ const SocialLoginGroup = () => {
             console.log("Google Login Success:", user);
 
             // Call Backend
-            dispatch(socialLogin(email, firstName, lastName, image, navigate));
+            dispatch(socialLogin(email, firstName, lastName, image, navigate, accountType));
 
         } catch (error) {
             console.error("Google Login Error:", error);
@@ -49,7 +49,7 @@ const SocialLoginGroup = () => {
                 return;
             }
 
-            dispatch(socialLogin(email, firstName, lastName, image, navigate));
+            dispatch(socialLogin(email, firstName, lastName, image, navigate, accountType));
         } catch (error) {
             console.error("Facebook Login Error:", error);
         }
