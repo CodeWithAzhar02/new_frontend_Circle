@@ -230,7 +230,7 @@ const Home = () => {
                                 ratingAndReviews: [{ rating: 4.5 }, { rating: 5 }],
                             },
                             {
-                                _id: "693377effde4569764f091a5",
+                                _id: "69337a221cf5e6f4dd99d455",
                                 courseName: "Web Development Bootcamp",
                                 price: 2499,
                                 thumbnail: backgroundImg2,
@@ -238,7 +238,7 @@ const Home = () => {
                                 ratingAndReviews: [{ rating: 4.0 }],
                             },
                             {
-                                _id: "693377effde4569764f091a5",
+                                _id: "69337a231cf5e6f4dd99d45c",
                                 courseName: "Data Science with AI",
                                 price: 2999,
                                 thumbnail: backgroundImg3,
@@ -246,9 +246,9 @@ const Home = () => {
                                 ratingAndReviews: [{ rating: 4.8 }, { rating: 4.9 }],
                             },
                             {
-                                _id: "693377effde4569764f091a5",
-                                courseName: "Machine Learning with Python",
-                                price: 3499,
+                                _id: "69337a231cf5e6f4dd99d463",
+                                courseName: "Java Masterclass",
+                                price: 1599,
                                 thumbnail: backgroundImg4,
                                 instructor: { firstName: "Bob", lastName: "Brown" },
                                 ratingAndReviews: [{ rating: 4.2 }, { rating: 4.3 }],
@@ -261,7 +261,7 @@ const Home = () => {
                         </h2>
                         <Course_Slider Courses={CatalogPageData?.mostSellingCourses?.length ? CatalogPageData?.mostSellingCourses : [
                             {
-                                _id: "693377effde4569764f091a5",
+                                _id: "69337a231cf5e6f4dd99d463",
                                 courseName: "Java Masterclass",
                                 price: 1599,
                                 thumbnail: backgroundImg5,
@@ -269,25 +269,25 @@ const Home = () => {
                                 ratingAndReviews: [{ rating: 4.6 }],
                             },
                             {
-                                _id: "693377effde4569764f091a5",
-                                courseName: "C++ Comprehensive",
-                                price: 1899,
+                                _id: "69337a231cf5e6f4dd99d45c",
+                                courseName: "Data Science with AI",
+                                price: 2999,
                                 thumbnail: backgroundImg6,
                                 instructor: { firstName: "Sarah", lastName: "Connor" },
                                 ratingAndReviews: [{ rating: 4.7 }, { rating: 4.5 }],
                             },
                             {
-                                _id: "693377effde4569764f091a5",
-                                courseName: "React JS Zero to Hero",
-                                price: 2299,
+                                _id: "69337a221cf5e6f4dd99d455",
+                                courseName: "Web Development Bootcamp",
+                                price: 2499,
                                 thumbnail: backgroundImg7,
                                 instructor: { firstName: "Mike", lastName: "Ross" },
                                 ratingAndReviews: [{ rating: 4.9 }],
                             },
                             {
                                 _id: "693377effde4569764f091a5",
-                                courseName: "Node.js Backend Guide",
-                                price: 1799,
+                                courseName: "Python for Beginners",
+                                price: 1999,
                                 thumbnail: backgroundImg8,
                                 instructor: { firstName: "Rachel", lastName: "Green" },
                                 ratingAndReviews: [{ rating: 4.4 }],
