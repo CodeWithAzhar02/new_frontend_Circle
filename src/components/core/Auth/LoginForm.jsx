@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom"
 
 import { login } from "../../../services/operations/authAPI"
 import SocialLoginGroup from "./SocialLoginGroup"
+import Tab from "../../common/Tab"
+import { ACCOUNT_TYPE } from "../../../utils/constants"
 
 function LoginForm() {
   const navigate = useNavigate();
@@ -14,7 +16,22 @@ function LoginForm() {
     password: "",
   });
 
+  const [accountType, setAccountType] = useState(ACCOUNT_TYPE.STUDENT);
+
   const [showPassword, setShowPassword] = useState(false)
+
+  const tabData = [
+    {
+      id: 1,
+      tabName: "Student",
+      type: ACCOUNT_TYPE.STUDENT,
+    },
+    {
+      id: 2,
+      tabName: "Instructor",
+      type: ACCOUNT_TYPE.INSTRUCTOR,
+    },
+  ];
 
   const { email, password } = formData;
 
@@ -32,6 +49,7 @@ function LoginForm() {
 
   return (
     <>
+      <Tab tabData={tabData} field={accountType} setField={setAccountType} />
       <form
         onSubmit={handleOnSubmit}
         className="mt-6 flex w-full flex-col gap-y-4"
@@ -97,7 +115,7 @@ function LoginForm() {
       </form>
 
       <div className="mt-6 flex flex-col items-center">
-        <SocialLoginGroup />
+        <SocialLoginGroup accountType={accountType} />
       </div>
     </>
   )
