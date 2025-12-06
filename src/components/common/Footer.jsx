@@ -178,7 +178,7 @@ const Footer = () => {
 
               <Link to='https://github.com/CodeWithAzhar02/Study_Circle_MERN_Stack' target="__blank" className="text-white hover:underline mr-1"
               >
-                Azhar Ali
+                Azhar Ali, Ravi Deshwal & Ritesh Singh
               </Link>
             </div>
             <span> © 2023 Study Circle</span>
