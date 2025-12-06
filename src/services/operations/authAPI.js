@@ -48,7 +48,12 @@ export function socialLogin(email, firstName, lastName, image, navigate, account
       localStorage.setItem("token", JSON.stringify(response.data?.token));
       localStorage.setItem("user", JSON.stringify({ ...response.data.user, image: userImage }));
 
-      navigate("/dashboard/my-profile");
+      // Redirect based on Account Type
+      if (response.data.user.accountType === "Instructor") {
+        navigate("/dashboard/instructor");
+      } else {
+        navigate("/dashboard/my-profile");
+      }
     } catch (error) {
       console.log("SOCIAL LOGIN API ERROR.......", error)
       toast.error(error.response?.data?.message)
@@ -159,7 +164,12 @@ export function login(email, password, navigate) {
 
       localStorage.setItem("user", JSON.stringify({ ...response.data.user, image: userImage }));
 
-      navigate("/dashboard/my-profile");
+      // Redirect based on Account Type
+      if (response.data.user.accountType === "Instructor") {
+        navigate("/dashboard/instructor");
+      } else {
+        navigate("/dashboard/my-profile");
+      }
     } catch (error) {
       console.log("LOGIN API ERROR.......", error)
       toast.error(error.response?.data?.message)
