@@ -240,7 +240,7 @@ function CourseDetails() {
             <div className="flex w-full flex-col gap-4 border-y border-y-richblack-500 py-4 lg:hidden">
               <p className="space-x-3 pb-4 text-3xl font-semibold text-richblack-5">Rs. {price}</p>
               <button className="yellowButton" onClick={handleBuyCourse}>
-                {user && course?.studentsEnrolled.includes(user?._id) ? "Go to Course" : price === 0 ? "Get For Free" : "Buy Now"}
+                {user && studentsEnrolled?.includes(user?._id) ? "Go to Course" : price === 0 ? "Get For Free" : "Buy Now"}
               </button>
               <button onClick={handleAddToCart} className="blackButton">Add to Cart</button>
             </div>
