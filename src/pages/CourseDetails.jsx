@@ -127,6 +127,14 @@ function CourseDetails() {
     )
   }
 
+  if (!response?.data?.courseDetails) {
+    return (
+      <div className="flex justify-center items-center h-screen bg-richblack-800 text-white text-3xl">
+        <p className="text-richblack-5">Error: Course Details Not Found</p>
+      </div>
+    )
+  }
+
   // extract course data
   const {
     _id: course_id,
